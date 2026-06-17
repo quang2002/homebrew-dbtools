@@ -10,7 +10,7 @@ class Dbtools < Formula
   version "1.0.0"
 
   def install
-    bin.install "dbtools"
+    bin.install "DBTools" => "dbtools"
   end
 
   test do
