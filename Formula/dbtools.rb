@@ -10,7 +10,12 @@ class Dbtools < Formula
   version "1.0.0"
 
   def install
-    bin.install "DBTools" => "dbtools"
+    libexec.install Dir["*"]
+    
+    (bin/"dbtools").write <<~EOS
+        #!/bin/bash
+        exec dotnet "#{libexec}/DBTools.dll" "$@"
+    EOS
   end
 
   test do
