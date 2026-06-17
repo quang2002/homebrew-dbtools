@@ -1,4 +1,4 @@
-class DBTools < Formula
+class Dbtools < Formula
   desc "A command-line tool for managing databases and performing various database operations."
   homepage "https://github.com/quang2002/dbtools"
 
